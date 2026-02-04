@@ -206,6 +206,6 @@ MIT © [Julio Borges](https://github.com/julioborges)
 
 **Made with ❤️ for the n8n community**
 
-[⭐ Star this repo](https://github.com/julioborges/n8n-antigravity-skills) · [🐛 Report Bug](https://github.com/julioborges/n8n-antigravity-skills/issues) · [💡 Request Feature](https://github.com/julioborges/n8n-antigravity-skills/issues)
+[⭐ Star this repo](https://github.com/julioborges/ag-n8n-skills) · [🐛 Report Bug](https://github.com/julioborges/ag-n8n-skills/issues) · [💡 Request Feature](https://github.com/julioborges/ag-n8n-skills/issues)
 
 </div>

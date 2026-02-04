@@ -6,11 +6,11 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/julioborges/n8n-antigravity-skills.git"
+        "url": "git+https://github.com/julioborges/ag-n8n-skills.git"
     },
-    "homepage": "https://github.com/julioborges/n8n-antigravity-skills#readme",
+    "homepage": "https://github.com/julioborges/ag-n8n-skills#readme",
     "bugs": {
-        "url": "https://github.com/julioborges/n8n-antigravity-skills/issues"
+        "url": "https://github.com/julioborges/ag-n8n-skills/issues"
     },
     "keywords": [
         "n8n",
