@@ -1,0 +1,43 @@
+{
+    "name": "ag-n8n-skills",
+    "version": "1.0.0",
+    "description": "🤖 n8n Automation Expert Agent with Skills for Antigravity IDE - Build production-ready n8n workflows with AI assistance",
+    "author": "Julio Borges",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/julioborges/n8n-antigravity-skills.git"
+    },
+    "homepage": "https://github.com/julioborges/n8n-antigravity-skills#readme",
+    "bugs": {
+        "url": "https://github.com/julioborges/n8n-antigravity-skills/issues"
+    },
+    "keywords": [
+        "n8n",
+        "antigravity",
+        "ai-agent",
+        "automation",
+        "workflow",
+        "skills",
+        "mcp",
+        "low-code",
+        "no-code"
+    ],
+    "bin": {
+        "ag-n8n-skills": "./bin/ag-n8n-skills.js"
+    },
+    "files": [
+        "bin",
+        ".agent",
+        "assets"
+    ],
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "commander": "^11.1.0",
+        "fs-extra": "^11.2.0",
+        "ora": "^5.4.1"
+    }
+}
