@@ -1,11 +1,11 @@
 ---
 name: n8n-automation
-description: Master skill for building production-ready n8n workflows. Combines 7 specialized skills for expressions, MCP tools, patterns, validation, node configuration, JavaScript and Python code. Use when creating, validating, or debugging n8n workflows.
+description: Master skill for building production-ready n8n workflows. Combines 8 specialized skills for template search, expressions, MCP tools, patterns, validation, node configuration, JavaScript and Python code. Use when creating, validating, or debugging n8n workflows.
 ---
 
 # n8n Automation Master Skill
 
-Unified skill that orchestrates 7 specialized n8n skills to build production-ready workflows.
+Unified skill that orchestrates 8 specialized n8n skills to build production-ready workflows.
 
 ---
 
@@ -13,6 +13,7 @@ Unified skill that orchestrates 7 specialized n8n skills to build production-rea
 
 | Skill | Purpose | When Activated |
 |-------|---------|----------------|
+| [n8n-template-search](n8n-template-search/SKILL.md) | Template discovery | Finding workflow templates, examples |
 | [n8n-mcp-tools-expert](n8n-mcp-tools-expert/SKILL.md) | MCP tool usage | Searching nodes, templates, validating |
 | [n8n-workflow-patterns](n8n-workflow-patterns/SKILL.md) | Architectural patterns | Creating new workflows |
 | [n8n-expression-syntax](n8n-expression-syntax/SKILL.md) | Expression syntax | $json, $node references |
@@ -24,6 +25,16 @@ Unified skill that orchestrates 7 specialized n8n skills to build production-rea
 ---
 
 ## 🎯 Quick Reference
+
+### Template Search (ALWAYS START HERE!)
+
+**MCP Template Library** (2,709+ templates):
+- `search_templates` - Find by keyword, nodes, task, metadata
+- `get_template` - Get template JSON for deployment
+
+**Web Template Discovery** (for recent/community templates):
+- Load `n8n-template-search` skill for comprehensive web search
+- Combines n8n.io, GitHub, forum sources
 
 ### MCP Tools Available
 
@@ -59,20 +70,42 @@ Unified skill that orchestrates 7 specialized n8n skills to build production-rea
 
 ## 📋 Workflow Creation Process
 
-### Step 1: Template Discovery (ALWAYS FIRST)
+### Step 0: Template Discovery (ALWAYS FIRST!) 🔍
+
+**CRITICAL**: Before building anything, search for existing templates!
 
 ```javascript
-// Search by keyword
+// Quick keyword search (MCP - fastest)
 search_templates({query: "slack notification"})
 
-// Search by task type
+// Search by specific nodes
+search_templates({
+  searchMode: "by_nodes",
+  nodeTypes: ["n8n-nodes-base.webhook", "n8n-nodes-base.slack"]
+})
+
+// Search by workflow pattern
 search_templates({searchMode: "by_task", task: "webhook_processing"})
 
-// Search by complexity
-search_templates({searchMode: "by_metadata", complexity: "simple"})
+// Search by complexity/time
+search_templates({
+  searchMode: "by_metadata",
+  complexity: "simple",
+  maxSetupMinutes: 15
+})
+
+// If MCP insufficient: Web search (load n8n-template-search skill)
+WebFetch({
+  url: "https://n8n.io/workflows/?search=slack",
+  prompt: "Find Slack notification templates with descriptions"
+})
 ```
 
-### Step 2: Node Discovery (if no template fits)
+**Found suitable template?**
+- ✅ YES → Deploy with `n8n_deploy_template({templateId: XXX, autoFix: true})`
+- ❌ NO → Continue to Step 1 (Node Discovery)
+
+### Step 1: Node Discovery (if no template fits)
 
 ```javascript
 // Search for nodes
@@ -198,6 +231,7 @@ Read the specific sub-skill when:
 
 | Situation | Load |
 |-----------|------|
+| Finding workflow templates/examples | [n8n-template-search](n8n-template-search/SKILL.md) |
 | Writing expressions with `$json` | [n8n-expression-syntax](n8n-expression-syntax/SKILL.md) |
 | Using MCP tools | [n8n-mcp-tools-expert](n8n-mcp-tools-expert/SKILL.md) |
 | Designing workflow architecture | [n8n-workflow-patterns](n8n-workflow-patterns/SKILL.md) |
