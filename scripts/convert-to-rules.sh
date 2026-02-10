@@ -65,7 +65,7 @@ Load these skills from `.agent/.skills/n8n-automation/` when needed:
 - ✅ Implement error handling
 - ✅ Load specific skill when encountering complexity
 
-For full agent documentation, see: @.agent/.agents/n8n-automation-expert.md
+For full agent documentation, see: @.agent/agents/n8n-automation-expert.md
 EOF
     echo "✅ Created .cursorrules"
 }
@@ -112,7 +112,7 @@ Reference these files when needed:
 4. Configure parameters explicitly
 5. Implement error handling
 
-See `.agent/.agents/n8n-automation-expert.md` for complete guidelines.
+See `.agent/agents/n8n-automation-expert.md` for complete guidelines.
 EOF
     echo "✅ Created .windsurfrules"
 }
@@ -143,7 +143,7 @@ To load a skill, read the corresponding SKILL.md file.
 
 ## Usage Pattern
 When user requests n8n work:
-1. Read: `.agent/.agents/n8n-automation-expert.md`
+1. Read: `.agent/agents/n8n-automation-expert.md`
 2. Follow workflow: Template Search → Build → Validate
 3. Load specific skills as needed
 
@@ -167,7 +167,7 @@ create_continue_config() {
     {
       "name": "n8n-agent",
       "params": {
-        "path": ".agent/.agents/n8n-automation-expert.md"
+        "path": ".agent/agents/n8n-automation-expert.md"
       }
     },
     {
@@ -186,7 +186,7 @@ create_continue_config() {
     {
       "name": "n8n-build",
       "description": "Build n8n workflow",
-      "prompt": "Load .agent/.agents/n8n-automation-expert.md and help me build: {input}"
+      "prompt": "Load .agent/agents/n8n-automation-expert.md and help me build: {input}"
     },
     {
       "name": "n8n-debug",
@@ -209,14 +209,14 @@ create_aider_instructions() {
 
 ```bash
 # Load main agent
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 
 # Load specific skill
 aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 
 # Load multiple skills
 aider \
-  --read .agent/.agents/n8n-automation-expert.md \
+  --read .agent/agents/n8n-automation-expert.md \
   --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md \
   --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
@@ -231,7 +231,7 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 
 ### Build Workflow
 ```bash
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 # Then: "Create a workflow that sends Slack notifications"
 ```
 

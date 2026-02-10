@@ -116,7 +116,7 @@ npx ag-n8n-skills init
 
 **Usage**:
 ```
-You: "Create webhook workflow @.agent/.agents/n8n-automation-expert.md"
+You: "Create webhook workflow @.agent/agents/n8n-automation-expert.md"
 Windsurf: [Loads agent and creates workflow]
 ```
 
@@ -173,7 +173,7 @@ npx ag-n8n-skills init
 
 **Usage**:
 ```
-You: "Read .agent/.agents/n8n-automation-expert.md then create webhook workflow"
+You: "Read .agent/agents/n8n-automation-expert.md then create webhook workflow"
 Cline: [Loads agent context and creates workflow]
 ```
 
@@ -224,7 +224,7 @@ npx ag-n8n-skills init
 # 2. See AIDER_USAGE.md for instructions
 
 # 3. Load agent manually
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 ```
 
 **Features**:
@@ -446,7 +446,7 @@ To load: read the corresponding SKILL.md file
 {
   "name": "n8n Automation Expert",
   "contextProviders": [
-    {"name": "n8n-agent", "params": {"path": ".agent/.agents/..."}}
+    {"name": "n8n-agent", "params": {"path": ".agent/agents/..."}}
   ],
   "customCommands": [
     {"name": "n8n-template-search", "prompt": "Load skill and search..."}
@@ -472,7 +472,7 @@ To load: read the corresponding SKILL.md file
 # Using n8n Skills with Aider
 
 ## Loading the Agent
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 
 ## Common Commands
 # Template search
@@ -484,7 +484,7 @@ aider --read .agent/.skills/.../n8n-template-search/SKILL.md
 ### Conversion Process Details
 
 The script:
-1. **Reads** `.agent/.agents/n8n-automation-expert.md` (main agent)
+1. **Reads** `.agent/agents/n8n-automation-expert.md` (main agent)
 2. **Extracts** key instructions and skill references
 3. **Adapts** content to each platform's format:
    - Cursor: Markdown rules with @ mentions
@@ -510,7 +510,7 @@ bash -x scripts/convert-to-rules.sh
 # Example: Only create .cursorrules
 cat > .cursorrules << 'EOF'
 # Your custom rules here
-# Reference: .agent/.agents/n8n-automation-expert.md
+# Reference: .agent/agents/n8n-automation-expert.md
 EOF
 ```
 
@@ -596,7 +596,7 @@ cat .continuerc.json  # Should show JSON config
 **Cursor/Windsurf**:
 1. Ensure `.cursorrules` or `.windsurfrules` exists
 2. Reload window
-3. Try @ mention: `@.agent/.agents/n8n-automation-expert.md`
+3. Try @ mention: `@.agent/agents/n8n-automation-expert.md`
 
 **Cline/Continue**:
 1. Check configuration file exists
@@ -663,7 +663,7 @@ npx ag-n8n-skills init
 > "Help me search templates @.agent/.skills/n8n-automation/n8n-template-search/SKILL.md"
 
 # Method 3: @ mention agent
-> "@.agent/.agents/n8n-automation-expert.md build a scheduled workflow"
+> "@.agent/agents/n8n-automation-expert.md build a scheduled workflow"
 
 # Check rules loaded
 # Look at Cursor settings → Rules → should show .cursorrules active
@@ -696,14 +696,14 @@ npx ag-n8n-skills init
 ./scripts/convert-to-rules.sh
 
 # Explicitly mention files
-> "Read .agent/.agents/n8n-automation-expert.md and help me create webhook workflow"
+> "Read .agent/agents/n8n-automation-expert.md and help me create webhook workflow"
 
 # Load specific skill
 > "Read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md and find Slack templates"
 
 # Multiple skills
 > "Read these files:
-   - .agent/.agents/n8n-automation-expert.md
+   - .agent/agents/n8n-automation-expert.md
    - .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
    Then design a webhook processing workflow"
 ```
@@ -740,12 +740,12 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 > "Find templates for Stripe payment processing"
 
 # Build workflow with agent
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 > "Create a workflow: webhook → validate → Slack notification"
 
 # Load multiple skills for complex task
 aider \
-  --read .agent/.agents/n8n-automation-expert.md \
+  --read .agent/agents/n8n-automation-expert.md \
   --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md \
   --read .agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md
 > "Design and validate a complex AI agent workflow"
@@ -785,7 +785,7 @@ npx ag-n8n-skills init
 ## 📚 Additional Resources
 
 - **Main Documentation**: [README.md](README.md)
-- **Agent Documentation**: [.agent/.agents/n8n-automation-expert.md](.agent/.agents/n8n-automation-expert.md)
+- **Agent Documentation**: [.agent/agents/n8n-automation-expert.md](.agent/agents/n8n-automation-expert.md)
 - **Skills Overview**: [.agent/.skills/n8n-automation/SKILL.md](.agent/.skills/n8n-automation/SKILL.md)
 - **Template Search**: [.agent/.skills/n8n-automation/n8n-template-search/README.md](.agent/.skills/n8n-automation/n8n-template-search/README.md)
 - **Aider Instructions**: [AIDER_USAGE.md](AIDER_USAGE.md)

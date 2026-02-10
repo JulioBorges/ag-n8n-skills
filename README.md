@@ -68,7 +68,7 @@ chmod +x scripts/convert-to-rules.sh
 
 ```
 .agent/
-├── .agents/
+├── agents/
 │   └── n8n-automation-expert.md    # 🤖 Expert Agent
 └── .skills/
     └── n8n-automation/             # 🛠️ 8 Specialized Skills
@@ -400,7 +400,7 @@ npx ag-n8n-skills init
 # Cmd/Ctrl+Shift+P → "Reload Window"
 
 # 4. Explicitly mention files when needed
-"Read .agent/.agents/n8n-automation-expert.md and create webhook workflow"
+"Read .agent/agents/n8n-automation-expert.md and create webhook workflow"
 ```
 
 **Features**: 🟡 Manual loading | 🟡 MCP (config) | ✅ Template search (web) | ✅ All skills
@@ -442,7 +442,7 @@ npx ag-n8n-skills init
 # 2. Read AIDER_USAGE.md for commands
 
 # 3. Load agent manually
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 
 # Or load specific skill
 aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
@@ -457,12 +457,12 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 # Then: "Find webhook templates"
 
 # Build workflow
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 # Then: "Create Slack notification workflow"
 
 # Multiple skills
 aider \
-  --read .agent/.agents/n8n-automation-expert.md \
+  --read .agent/agents/n8n-automation-expert.md \
   --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
 
@@ -477,7 +477,7 @@ aider \
 ls -la .agent/
 
 # Should show:
-# .agent/.agents/n8n-automation-expert.md
+# .agent/agents/n8n-automation-expert.md
 # .agent/.skills/n8n-automation/...
 ```
 
@@ -580,7 +580,7 @@ All skills are stored in **universal `.agent/` format** (Markdown):
 
 ```
 .agent/
-├── .agents/
+├── agents/
 │   └── n8n-automation-expert.md    ← Agent instructions
 └── .skills/
     └── n8n-automation/             ← 8 specialized skills
@@ -613,7 +613,7 @@ Step 1: Install                Step 2: Convert               Step 3: Use
 ```bash
 # Original (stays unchanged)
 .agent/
-├── .agents/n8n-automation-expert.md
+├── agents/n8n-automation-expert.md
 └── .skills/n8n-automation/...
 
 # After conversion (new files)
@@ -643,7 +643,7 @@ AIDER_USAGE.md           ← Aider
 # What the script does:
 ./scripts/convert-to-rules.sh
 
-1. ✅ Reads .agent/.agents/n8n-automation-expert.md
+1. ✅ Reads .agent/agents/n8n-automation-expert.md
 2. ✅ Extracts key instructions and skill paths
 3. ✅ Generates platform-specific format:
    - Cursor: Markdown rules with @ references
@@ -722,7 +722,7 @@ Which AI assistant are you using?
 ### Skills Documentation
 - 🎯 **[Master Skill](.agent/.skills/n8n-automation/SKILL.md)** - Overview of all 8 skills
 - 🆕 **[Template Search](.agent/.skills/n8n-automation/n8n-template-search/README.md)** - Multi-source template discovery
-- 🤖 **[Agent](.agent/.agents/n8n-automation-expert.md)** - Expert agent documentation
+- 🤖 **[Agent](.agent/agents/n8n-automation-expert.md)** - Expert agent documentation
 - 🛠️ **Individual Skills**:
   - [MCP Tools Expert](.agent/.skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md)
   - [Workflow Patterns](.agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md)

@@ -30,7 +30,7 @@ Quick guide to converting `.agent/` format to platform-specific rules files.
 ### Input (Already exists after `npx ag-n8n-skills init`)
 ```
 .agent/
-├── .agents/
+├── agents/
 │   └── n8n-automation-expert.md
 └── .skills/
     └── n8n-automation/
@@ -106,7 +106,7 @@ Windsurf: [Reads .windsurfrules and loads agent]
 
 **Example usage**:
 ```
-You: "Read .agent/.agents/n8n-automation-expert.md and create workflow"
+You: "Read .agent/agents/n8n-automation-expert.md and create workflow"
 Cline: [Uses .clinerules as reference]
 ```
 
@@ -158,7 +158,7 @@ Cline: [Uses .clinerules as reference]
 **Example usage**:
 ```bash
 # Load agent
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 
 # Load specific skill
 aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
@@ -171,7 +171,7 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 ### Step 1: Read Source
 ```bash
 # Script reads the main agent file
-.agent/.agents/n8n-automation-expert.md
+.agent/agents/n8n-automation-expert.md
 ```
 
 ### Step 2: Extract Information

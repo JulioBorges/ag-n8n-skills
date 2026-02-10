@@ -80,7 +80,7 @@ async function initCommand(options) {
 
         console.log('\n' + chalk.bold('📦 Installed:'));
         console.log(chalk.dim('   └── .agent/'));
-        console.log(chalk.dim('       ├── .agents/'));
+        console.log(chalk.dim('       ├── agents/'));
         console.log(chalk.dim('       │   └── n8n-automation-expert.md'));
         console.log(chalk.dim('       └── .skills/'));
         console.log(chalk.dim('           └── n8n-automation/ (8 skills)'));

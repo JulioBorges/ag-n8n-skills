@@ -78,7 +78,7 @@ Windsurf: [Reads .windsurfrules and creates workflow]
 
 Or use @ mentions:
 ```
-You: "@.agent/.agents/n8n-automation-expert.md help me build this"
+You: "@.agent/agents/n8n-automation-expert.md help me build this"
 ```
 
 **Time to start**: 2 minutes
@@ -143,7 +143,7 @@ npx ag-n8n-skills init
 
 Explicitly mention files:
 ```
-You: "Read .agent/.agents/n8n-automation-expert.md and create webhook workflow"
+You: "Read .agent/agents/n8n-automation-expert.md and create webhook workflow"
 ```
 
 Load specific skills:
@@ -214,7 +214,7 @@ cat AIDER_USAGE.md
 
 Load agent manually:
 ```bash
-aider --read .agent/.agents/n8n-automation-expert.md
+aider --read .agent/agents/n8n-automation-expert.md
 ```
 
 Load specific skills:
@@ -226,7 +226,7 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 Multiple skills:
 ```bash
 aider \
-  --read .agent/.agents/n8n-automation-expert.md \
+  --read .agent/agents/n8n-automation-expert.md \
   --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
 
@@ -244,7 +244,7 @@ The `.agent/` folder contains all skills in **universal Markdown format**. The c
 ```
 your-project/
 └── .agent/
-    ├── .agents/n8n-automation-expert.md
+    ├── agents/n8n-automation-expert.md
     └── .skills/n8n-automation/...
 ```
 
