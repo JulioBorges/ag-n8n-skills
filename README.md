@@ -70,7 +70,7 @@ chmod +x scripts/convert-to-rules.sh
 .agent/
 ├── agents/
 │   └── n8n-automation-expert.md    # 🤖 Expert Agent
-└── .skills/
+└── skills/
     └── n8n-automation/             # 🛠️ 8 Specialized Skills
         ├── n8n-template-search/    # 🆕 NEW: Multi-source template discovery
         ├── n8n-mcp-tools-expert/   # MCP tools usage
@@ -362,7 +362,7 @@ npx ag-n8n-skills init
 
 **Tip**: `.cursorrules` is auto-detected. You can also reference skills directly:
 ```
-@.agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+@.agent/skills/n8n-automation/n8n-template-search/SKILL.md
 ```
 
 ---
@@ -445,7 +445,7 @@ npx ag-n8n-skills init
 aider --read .agent/agents/n8n-automation-expert.md
 
 # Or load specific skill
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 ```
 
 **Features**: 🟡 Manual loading | ❌ No MCP | ✅ Template search (web) | ✅ All skills
@@ -453,7 +453,7 @@ aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
 **Common workflows**:
 ```bash
 # Template search
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 # Then: "Find webhook templates"
 
 # Build workflow
@@ -463,7 +463,7 @@ aider --read .agent/agents/n8n-automation-expert.md
 # Multiple skills
 aider \
   --read .agent/agents/n8n-automation-expert.md \
-  --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
+  --read .agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
 
 ---
@@ -478,7 +478,7 @@ ls -la .agent/
 
 # Should show:
 # .agent/agents/n8n-automation-expert.md
-# .agent/.skills/n8n-automation/...
+# .agent/skills/n8n-automation/...
 ```
 
 ### Check Conversion
@@ -568,7 +568,7 @@ WebFetch({
 - ✅ Learn from real-world workflow implementations
 - ✅ Reduce development time with proven templates
 
-**Learn more**: See [n8n-template-search documentation](./.agent/.skills/n8n-automation/n8n-template-search/README.md)
+**Learn more**: See [n8n-template-search documentation](./.agent/skills/n8n-automation/n8n-template-search/README.md)
 
 ---
 
@@ -582,7 +582,7 @@ All skills are stored in **universal `.agent/` format** (Markdown):
 .agent/
 ├── agents/
 │   └── n8n-automation-expert.md    ← Agent instructions
-└── .skills/
+└── skills/
     └── n8n-automation/             ← 8 specialized skills
         ├── SKILL.md
         └── [sub-skills]/
@@ -614,7 +614,7 @@ Step 1: Install                Step 2: Convert               Step 3: Use
 # Original (stays unchanged)
 .agent/
 ├── agents/n8n-automation-expert.md
-└── .skills/n8n-automation/...
+└── skills/n8n-automation/...
 
 # After conversion (new files)
 .cursorrules              ← Cursor
@@ -720,17 +720,17 @@ Which AI assistant are you using?
   - [Aider](QUICK_START.md#%EF%B8%8F-aider-cli) (5 minutes)
 
 ### Skills Documentation
-- 🎯 **[Master Skill](.agent/.skills/n8n-automation/SKILL.md)** - Overview of all 8 skills
-- 🆕 **[Template Search](.agent/.skills/n8n-automation/n8n-template-search/README.md)** - Multi-source template discovery
+- 🎯 **[Master Skill](.agent/skills/n8n-automation/SKILL.md)** - Overview of all 8 skills
+- 🆕 **[Template Search](.agent/skills/n8n-automation/n8n-template-search/README.md)** - Multi-source template discovery
 - 🤖 **[Agent](.agent/agents/n8n-automation-expert.md)** - Expert agent documentation
 - 🛠️ **Individual Skills**:
-  - [MCP Tools Expert](.agent/.skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md)
-  - [Workflow Patterns](.agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md)
-  - [Expression Syntax](.agent/.skills/n8n-automation/n8n-expression-syntax/SKILL.md)
-  - [Validation Expert](.agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md)
-  - [Node Configuration](.agent/.skills/n8n-automation/n8n-node-configuration/SKILL.md)
-  - [JavaScript Code](.agent/.skills/n8n-automation/n8n-code-javascript/SKILL.md)
-  - [Python Code](.agent/.skills/n8n-automation/n8n-code-python/SKILL.md)
+  - [MCP Tools Expert](.agent/skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md)
+  - [Workflow Patterns](.agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md)
+  - [Expression Syntax](.agent/skills/n8n-automation/n8n-expression-syntax/SKILL.md)
+  - [Validation Expert](.agent/skills/n8n-automation/n8n-validation-expert/SKILL.md)
+  - [Node Configuration](.agent/skills/n8n-automation/n8n-node-configuration/SKILL.md)
+  - [JavaScript Code](.agent/skills/n8n-automation/n8n-code-javascript/SKILL.md)
+  - [Python Code](.agent/skills/n8n-automation/n8n-code-python/SKILL.md)
 
 ### Project Information
 - 📝 **[Changelog](CHANGELOG.md)** - Version history and updates
@@ -742,7 +742,7 @@ Which AI assistant are you using?
 | [QUICK_START.md](QUICK_START.md) | Get started with your platform | 2 min |
 | [COMPATIBILITY.md](COMPATIBILITY.md) | Understand platform support | 10 min |
 | [CONVERSION_GUIDE.md](CONVERSION_GUIDE.md) | Learn about rules conversion | 5 min |
-| [Template Search Skill](.agent/.skills/n8n-automation/n8n-template-search/README.md) | Template discovery guide | 5 min |
+| [Template Search Skill](.agent/skills/n8n-automation/n8n-template-search/README.md) | Template discovery guide | 5 min |
 
 ---
 

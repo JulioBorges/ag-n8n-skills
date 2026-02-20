@@ -236,7 +236,7 @@ aider --read .agent/agents/n8n-automation-expert.md
 **Usage**:
 ```bash
 # Template search
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 
 # Then in chat: "Find webhook templates"
 ```
@@ -376,9 +376,9 @@ The `.agent/` format is **universal** (Markdown files), but different AI assista
 ```markdown
 # n8n Automation Expert Rules
 
-Load skills from `.agent/.skills/n8n-automation/`:
-- n8n-template-search: @.agent/.skills/.../SKILL.md
-- n8n-workflow-patterns: @.agent/.skills/.../SKILL.md
+Load skills from `.agent/skills/n8n-automation/`:
+- n8n-template-search: @.agent/skills/.../SKILL.md
+- n8n-workflow-patterns: @.agent/skills/.../SKILL.md
 ...
 ```
 
@@ -400,7 +400,7 @@ Load skills from `.agent/.skills/n8n-automation/`:
 # n8n Automation Expert Rules for Windsurf
 
 Skills Directory Structure:
-.agent/.skills/n8n-automation/
+.agent/skills/n8n-automation/
 ├── n8n-template-search/
 ├── n8n-workflow-patterns/
 ...
@@ -424,7 +424,7 @@ Skills Directory Structure:
 # n8n Automation Expert - Cline Configuration
 
 ## Skills Location
-All skills are in: `.agent/.skills/n8n-automation/`
+All skills are in: `.agent/skills/n8n-automation/`
 
 To load: read the corresponding SKILL.md file
 ```
@@ -476,7 +476,7 @@ aider --read .agent/agents/n8n-automation-expert.md
 
 ## Common Commands
 # Template search
-aider --read .agent/.skills/.../n8n-template-search/SKILL.md
+aider --read .agent/skills/.../n8n-template-search/SKILL.md
 ```
 
 ---
@@ -660,7 +660,7 @@ npx ag-n8n-skills init
 > "Create webhook to Slack workflow"
 
 # Method 2: @ mention specific skills
-> "Help me search templates @.agent/.skills/n8n-automation/n8n-template-search/SKILL.md"
+> "Help me search templates @.agent/skills/n8n-automation/n8n-template-search/SKILL.md"
 
 # Method 3: @ mention agent
 > "@.agent/agents/n8n-automation-expert.md build a scheduled workflow"
@@ -699,12 +699,12 @@ npx ag-n8n-skills init
 > "Read .agent/agents/n8n-automation-expert.md and help me create webhook workflow"
 
 # Load specific skill
-> "Read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md and find Slack templates"
+> "Read .agent/skills/n8n-automation/n8n-template-search/SKILL.md and find Slack templates"
 
 # Multiple skills
 > "Read these files:
    - .agent/agents/n8n-automation-expert.md
-   - .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
+   - .agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md
    Then design a webhook processing workflow"
 ```
 
@@ -736,7 +736,7 @@ npx ag-n8n-skills init
 cat AIDER_USAGE.md
 
 # Template search workflow
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 > "Find templates for Stripe payment processing"
 
 # Build workflow with agent
@@ -746,8 +746,8 @@ aider --read .agent/agents/n8n-automation-expert.md
 # Load multiple skills for complex task
 aider \
   --read .agent/agents/n8n-automation-expert.md \
-  --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md \
-  --read .agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md
+  --read .agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md \
+  --read .agent/skills/n8n-automation/n8n-validation-expert/SKILL.md
 > "Design and validate a complex AI agent workflow"
 ```
 
@@ -786,8 +786,8 @@ npx ag-n8n-skills init
 
 - **Main Documentation**: [README.md](README.md)
 - **Agent Documentation**: [.agent/agents/n8n-automation-expert.md](.agent/agents/n8n-automation-expert.md)
-- **Skills Overview**: [.agent/.skills/n8n-automation/SKILL.md](.agent/.skills/n8n-automation/SKILL.md)
-- **Template Search**: [.agent/.skills/n8n-automation/n8n-template-search/README.md](.agent/.skills/n8n-automation/n8n-template-search/README.md)
+- **Skills Overview**: [.agent/skills/n8n-automation/SKILL.md](.agent/skills/n8n-automation/SKILL.md)
+- **Template Search**: [.agent/skills/n8n-automation/n8n-template-search/README.md](.agent/skills/n8n-automation/n8n-template-search/README.md)
 - **Aider Instructions**: [AIDER_USAGE.md](AIDER_USAGE.md)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 

@@ -17,39 +17,39 @@ create_cursor_rules() {
 You are an expert n8n workflow architect with 8+ years experience.
 
 ## Available Skills
-Load these skills from `.agent/.skills/n8n-automation/` when needed:
+Load these skills from `.agent/skills/n8n-automation/` when needed:
 
 - **n8n-template-search**: Template discovery (MCP + Web)
   - Load when: Finding templates, workflow examples
-  - Path: @.agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-template-search/SKILL.md
 
 - **n8n-mcp-tools-expert**: MCP tool usage
   - Load when: Using search_nodes, validate_node, etc.
-  - Path: @.agent/.skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md
 
 - **n8n-workflow-patterns**: Architectural patterns
   - Load when: Designing workflow structure
-  - Path: @.agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 
 - **n8n-expression-syntax**: Expressions ($json, $node)
   - Load when: Writing {{$json}} expressions
-  - Path: @.agent/.skills/n8n-automation/n8n-expression-syntax/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-expression-syntax/SKILL.md
 
 - **n8n-validation-expert**: Error handling & debugging
   - Load when: Validation errors occur
-  - Path: @.agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-validation-expert/SKILL.md
 
 - **n8n-node-configuration**: Node parameters
   - Load when: Configuring complex nodes
-  - Path: @.agent/.skills/n8n-automation/n8n-node-configuration/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-node-configuration/SKILL.md
 
 - **n8n-code-javascript**: JavaScript code nodes
   - Load when: Writing JS in Code nodes
-  - Path: @.agent/.skills/n8n-automation/n8n-code-javascript/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-code-javascript/SKILL.md
 
 - **n8n-code-python**: Python code nodes
   - Load when: Writing Python in Code nodes
-  - Path: @.agent/.skills/n8n-automation/n8n-code-python/SKILL.md
+  - Path: @.agent/skills/n8n-automation/n8n-code-python/SKILL.md
 
 ## Workflow Process
 1. **Template Search (ALWAYS FIRST)**: Search templates before building
@@ -79,10 +79,10 @@ create_windsurf_rules() {
 You are an expert n8n workflow architect.
 
 ## Skills Directory Structure
-All skills are in `.agent/.skills/n8n-automation/`:
+All skills are in `.agent/skills/n8n-automation/`:
 
 ```
-.agent/.skills/n8n-automation/
+.agent/skills/n8n-automation/
 ├── n8n-template-search/    # Template discovery
 ├── n8n-mcp-tools-expert/   # MCP tool usage
 ├── n8n-workflow-patterns/  # Architectural patterns
@@ -96,14 +96,14 @@ All skills are in `.agent/.skills/n8n-automation/`:
 ## When to Load Skills
 
 Reference these files when needed:
-- Template search: `.agent/.skills/n8n-automation/n8n-template-search/SKILL.md`
-- MCP tools: `.agent/.skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md`
-- Workflow patterns: `.agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md`
-- Expressions: `.agent/.skills/n8n-automation/n8n-expression-syntax/SKILL.md`
-- Validation: `.agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md`
-- Node config: `.agent/.skills/n8n-automation/n8n-node-configuration/SKILL.md`
-- JavaScript: `.agent/.skills/n8n-automation/n8n-code-javascript/SKILL.md`
-- Python: `.agent/.skills/n8n-automation/n8n-code-python/SKILL.md`
+- Template search: `.agent/skills/n8n-automation/n8n-template-search/SKILL.md`
+- MCP tools: `.agent/skills/n8n-automation/n8n-mcp-tools-expert/SKILL.md`
+- Workflow patterns: `.agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md`
+- Expressions: `.agent/skills/n8n-automation/n8n-expression-syntax/SKILL.md`
+- Validation: `.agent/skills/n8n-automation/n8n-validation-expert/SKILL.md`
+- Node config: `.agent/skills/n8n-automation/n8n-node-configuration/SKILL.md`
+- JavaScript: `.agent/skills/n8n-automation/n8n-code-javascript/SKILL.md`
+- Python: `.agent/skills/n8n-automation/n8n-code-python/SKILL.md`
 
 ## Core Process
 1. Search templates FIRST (always!)
@@ -127,7 +127,7 @@ create_cline_rules() {
 Expert n8n workflow architect with 8 specialized skills.
 
 ## Skills Location
-All skills are in: `.agent/.skills/n8n-automation/`
+All skills are in: `.agent/skills/n8n-automation/`
 
 To load a skill, read the corresponding SKILL.md file.
 
@@ -173,7 +173,7 @@ create_continue_config() {
     {
       "name": "n8n-skills",
       "params": {
-        "path": ".agent/.skills/n8n-automation/"
+        "path": ".agent/skills/n8n-automation/"
       }
     }
   ],
@@ -181,7 +181,7 @@ create_continue_config() {
     {
       "name": "n8n-template-search",
       "description": "Search for n8n workflow templates",
-      "prompt": "Load .agent/.skills/n8n-automation/n8n-template-search/SKILL.md and help me find templates for: {input}"
+      "prompt": "Load .agent/skills/n8n-automation/n8n-template-search/SKILL.md and help me find templates for: {input}"
     },
     {
       "name": "n8n-build",
@@ -191,7 +191,7 @@ create_continue_config() {
     {
       "name": "n8n-debug",
       "description": "Debug n8n workflow",
-      "prompt": "Load .agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md and help me debug: {input}"
+      "prompt": "Load .agent/skills/n8n-automation/n8n-validation-expert/SKILL.md and help me debug: {input}"
     }
   ]
 }
@@ -212,20 +212,20 @@ create_aider_instructions() {
 aider --read .agent/agents/n8n-automation-expert.md
 
 # Load specific skill
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 
 # Load multiple skills
 aider \
   --read .agent/agents/n8n-automation-expert.md \
-  --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md \
-  --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
+  --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md \
+  --read .agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
 
 ## Common Commands
 
 ### Template Search
 ```bash
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 # Then: "Find templates for webhook processing"
 ```
 
@@ -237,7 +237,7 @@ aider --read .agent/agents/n8n-automation-expert.md
 
 ### Debug Workflow
 ```bash
-aider --read .agent/.skills/n8n-automation/n8n-validation-expert/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-validation-expert/SKILL.md
 # Then: "My workflow validation failed with [error]"
 ```
 

@@ -112,7 +112,7 @@ Cursor: [Reads .cursorrules and creates workflow]
 
 Or reference skills directly:
 ```
-You: "@.agent/.skills/n8n-automation/n8n-template-search/SKILL.md find templates"
+You: "@.agent/skills/n8n-automation/n8n-template-search/SKILL.md find templates"
 ```
 
 **Time to start**: 2 minutes
@@ -148,7 +148,7 @@ You: "Read .agent/agents/n8n-automation-expert.md and create webhook workflow"
 
 Load specific skills:
 ```
-You: "Read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md and find Slack templates"
+You: "Read .agent/skills/n8n-automation/n8n-template-search/SKILL.md and find Slack templates"
 ```
 
 **Time to start**: 5 minutes
@@ -219,7 +219,7 @@ aider --read .agent/agents/n8n-automation-expert.md
 
 Load specific skills:
 ```bash
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 # Then: "Find webhook templates"
 ```
 
@@ -227,7 +227,7 @@ Multiple skills:
 ```bash
 aider \
   --read .agent/agents/n8n-automation-expert.md \
-  --read .agent/.skills/n8n-automation/n8n-workflow-patterns/SKILL.md
+  --read .agent/skills/n8n-automation/n8n-workflow-patterns/SKILL.md
 ```
 
 **Time to start**: 5 minutes
@@ -245,7 +245,7 @@ The `.agent/` folder contains all skills in **universal Markdown format**. The c
 your-project/
 └── .agent/
     ├── agents/n8n-automation-expert.md
-    └── .skills/n8n-automation/...
+    └── skills/n8n-automation/...
 ```
 
 ### After Conversion
@@ -325,7 +325,7 @@ MCP tools require configuration. For tools without native MCP support (unlike An
 
 - **Complete compatibility guide**: [COMPATIBILITY.md](COMPATIBILITY.md)
 - **Full README**: [README.md](README.md)
-- **Template search skill**: [.agent/.skills/n8n-automation/n8n-template-search/README.md](.agent/.skills/n8n-automation/n8n-template-search/README.md)
+- **Template search skill**: [.agent/skills/n8n-automation/n8n-template-search/README.md](.agent/skills/n8n-automation/n8n-template-search/README.md)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 
 ---

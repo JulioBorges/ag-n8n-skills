@@ -82,7 +82,7 @@ async function initCommand(options) {
         console.log(chalk.dim('   └── .agent/'));
         console.log(chalk.dim('       ├── agents/'));
         console.log(chalk.dim('       │   └── n8n-automation-expert.md'));
-        console.log(chalk.dim('       └── .skills/'));
+        console.log(chalk.dim('       └── skills/'));
         console.log(chalk.dim('           └── n8n-automation/ (8 skills)'));
 
         console.log('\n' + chalk.bold('🚀 Quick Start:'));
@@ -131,8 +131,8 @@ function statusCommand(options) {
         console.log(chalk.dim(`   📁 Location: ${targetPath}`));
 
         // Check subdirectories
-        const agentsPath = path.join(targetPath, '.agents');
-        const skillsPath = path.join(targetPath, '.skills');
+        const agentsPath = path.join(targetPath, 'agents');
+        const skillsPath = path.join(targetPath, 'skills');
 
         if (fs.existsSync(agentsPath)) {
             const agents = fs.readdirSync(agentsPath).filter(f => f.endsWith('.md'));

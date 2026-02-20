@@ -32,7 +32,7 @@ Quick guide to converting `.agent/` format to platform-specific rules files.
 .agent/
 ├── agents/
 │   └── n8n-automation-expert.md
-└── .skills/
+└── skills/
     └── n8n-automation/
         ├── n8n-template-search/
         ├── n8n-mcp-tools-expert/
@@ -161,7 +161,7 @@ Cline: [Uses .clinerules as reference]
 aider --read .agent/agents/n8n-automation-expert.md
 
 # Load specific skill
-aider --read .agent/.skills/n8n-automation/n8n-template-search/SKILL.md
+aider --read .agent/skills/n8n-automation/n8n-template-search/SKILL.md
 ```
 
 ---
@@ -345,7 +345,7 @@ ls -la .agent/
 - **Quick Start**: [QUICK_START.md](QUICK_START.md)
 - **Compatibility Guide**: [COMPATIBILITY.md](COMPATIBILITY.md)
 - **Main README**: [README.md](README.md)
-- **Template Search**: [.agent/.skills/n8n-automation/n8n-template-search/README.md](.agent/.skills/n8n-automation/n8n-template-search/README.md)
+- **Template Search**: [.agent/skills/n8n-automation/n8n-template-search/README.md](.agent/skills/n8n-automation/n8n-template-search/README.md)
 
 ---
 
