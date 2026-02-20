@@ -6,11 +6,11 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/julioborges/ag-n8n-skills.git"
+        "url": "https://github.com/JulioBorges/ag-n8n-skills.git"
     },
-    "homepage": "https://github.com/julioborges/ag-n8n-skills#readme",
+    "homepage": "https://github.com/JulioBorges/ag-n8n-skills#readme",
     "bugs": {
-        "url": "https://github.com/julioborges/ag-n8n-skills/issues"
+        "url": "https://github.com/JulioBorges/ag-n8n-skills/issues"
     },
     "keywords": [
         "n8n",
