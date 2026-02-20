@@ -6,7 +6,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/julioborges/ag-n8n-skills.git"
+        "url": "https://github.com/julioborges/ag-n8n-skills.git"
     },
     "homepage": "https://github.com/julioborges/ag-n8n-skills#readme",
     "bugs": {
