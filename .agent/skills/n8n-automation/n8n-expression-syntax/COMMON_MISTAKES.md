@@ -352,6 +352,86 @@ Hello {{$json.name}}!           // n8n expressions auto-concatenate
 
 **How to identify**: Literal "{{ }}" text appears in output.
 
+## 16. Split In Batches node incorrect implementation
+
+**Problem**: Split In Batches node not working as expected, because the workflow is not using the node correctly. 
+
+❌ **Wrong**:
+```
+node created with loop connection first and done connection second
+```
+
+✅ **Correct**:
+```
+When creating a Split in Batches node (n8n-nodes-base.splitInBatches), remember that in your connections, the first connection is the "done" connection and the second connection is the "loop" connection.
+```
+
+**Why it fails**: 
+Loops not running, done connection not executing.
+**How to identify**: 
+Loop and done connections are inverted.
+---
+
+## 17. If Node Version is not supported
+
+**Problem**: If node version is not supported, it will not work as expected.
+
+❌ **Wrong**:
+```
+node version is not supported
+```
+
+✅ **Correct**:
+```
+{
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            // conditions are dynamic and will be populated by the user
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -2736,
+        512
+      ],
+      "id": "{{$json.id}}",
+      "name": "INCOMING"
+    }
+  ],
+  "connections": {
+    "INCOMING": {
+      "main": [
+        [],
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "{{$json.instanceId}}"
+  }
+}
+```
+
+**Why it fails**: 
+If Node importations are not updated, the node will not work as expected.
+**How to identify**: 
+
+
 ---
 
 ## Quick Reference Table
@@ -373,6 +453,7 @@ Hello {{$json.name}}!           // n8n expressions auto-concatenate
 | Missing .json | Undefined | Add .json |
 | Template literals | Literal text | Use {{ }} |
 | Empty {{ }} | Literal braces | Add expression |
+| Split In Batches node incorrect implementation | Loop and done connections are inverted | Loop connection first and done connection second |
 
 ---
 
